@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQM-29-L0d">
-                                <rect key="frame" x="38" y="223" width="103" height="100"/>
+                                <rect key="frame" x="38.000000000000007" y="222" width="102.66666666666669" height="101"/>
                                 <color key="backgroundColor" red="0.990530303" green="0.93602332710000002" blue="0.78295337310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="dQM-29-L0d" secondAttribute="height" multiplier="51:50" id="63d-qh-h7R"/>
@@ -132,7 +132,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TWJ-DC-Zef" secondAttribute="trailing" constant="39" id="Rcp-7y-Yn4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CAq-uk-zdz" secondAttribute="bottom" constant="300" id="S5u-P6-iS3"/>
                             <constraint firstItem="cv5-Da-xpL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="288" id="Va3-V2-BO5"/>
-                            <constraint firstItem="dQM-29-L0d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="164" id="WrE-Kz-Ock"/>
+                            <constraint firstItem="dQM-29-L0d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="163" id="WrE-Kz-Ock"/>
                             <constraint firstItem="TWJ-DC-Zef" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="XzD-3S-e1u"/>
                             <constraint firstItem="cv5-Da-xpL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="164" id="YKq-MZ-lvk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="acp-bf-0WA" secondAttribute="bottom" constant="575" id="aNh-hG-vPs"/>
@@ -144,8 +144,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="counterField" destination="aXv-xp-XbT" id="oUb-TR-1ri"/>
-                        <outlet property="textView" destination="TWJ-DC-Zef" id="aRR-qT-OxQ"/>
+                        <outlet property="changesTextView" destination="TWJ-DC-Zef" id="kJw-Qz-k4y"/>
+                        <outlet property="counterLabel" destination="aXv-xp-XbT" id="t8H-uw-HuY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -164,13 +164,13 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
