@@ -1,24 +1,176 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="counter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Значение счётчика: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXv-xp-XbT">
+                                <rect key="frame" x="38" y="427" width="353" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aXv-xp-XbT" secondAttribute="height" multiplier="353:58" id="gQd-bF-9mm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQM-29-L0d">
+                                <rect key="frame" x="38.000000000000007" y="222" width="102.66666666666669" height="101"/>
+                                <color key="backgroundColor" red="0.990530303" green="0.93602332710000002" blue="0.78295337310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dQM-29-L0d" secondAttribute="height" multiplier="51:50" id="63d-qh-h7R"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="large">
+                                    <imageReference key="image" image="plus.square" catalog="system" variableValue="1"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="44" weight="bold"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="plusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PEJ-2Y-01H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acp-bf-0WA">
+                                <rect key="frame" x="163" y="223" width="103" height="100"/>
+                                <color key="backgroundColor" red="0.990530303" green="0.93602332710000002" blue="0.78295337310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="acp-bf-0WA" secondAttribute="height" multiplier="103:100" id="8g9-1b-4cg"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="large">
+                                    <imageReference key="image" image="minus.square" catalog="system" variableValue="1"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="tintColor"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="44" weight="bold"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="minusButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Moq-as-T0J"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="История изменений: " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAq-uk-zdz">
+                                <rect key="frame" x="38" y="561" width="297" height="37"/>
+                                <color key="backgroundColor" red="0.990530303" green="0.93602332710000002" blue="0.78295337310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CAq-uk-zdz" secondAttribute="height" multiplier="297:37" id="K02-YO-cQZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWJ-DC-Zef">
+                                <rect key="frame" x="38" y="606" width="353" height="234"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TWJ-DC-Zef" secondAttribute="height" multiplier="353:234" id="Z84-DP-7SW"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cv5-Da-xpL">
+                                <rect key="frame" x="288" y="223" width="103" height="100"/>
+                                <color key="backgroundColor" red="0.990530303" green="0.93602332710000002" blue="0.78295337310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cv5-Da-xpL" secondAttribute="height" multiplier="103:100" id="ZQD-tL-f8i"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="" cornerStyle="large">
+                                    <imageReference key="image" image="arrow.circlepath" catalog="system" variableValue="1"/>
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.017862039236265226" green="0.54281092171717171" blue="0.30056124046539034" alpha="0.28215542218543044" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="43" weight="bold"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TRo-Kt-aoA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99053030303030298" green="0.93602332713829117" blue="0.78295337309713187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="CAq-uk-zdz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="502" id="1Wn-kn-QKJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dQM-29-L0d" secondAttribute="trailing" constant="289.33334350585938" id="246-43-oht"/>
+                            <constraint firstItem="acp-bf-0WA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="164" id="7tm-0Z-9Mk"/>
+                            <constraint firstItem="aXv-xp-XbT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="8sY-bA-s4C"/>
+                            <constraint firstItem="dQM-29-L0d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="914-Cn-Tm7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cv5-Da-xpL" secondAttribute="bottom" constant="575" id="94y-QV-6uv"/>
+                            <constraint firstItem="TWJ-DC-Zef" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="547" id="CFc-Ad-Myd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TWJ-DC-Zef" secondAttribute="bottom" constant="58" id="HOU-37-xFH"/>
+                            <constraint firstItem="CAq-uk-zdz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="IOB-99-fPS"/>
+                            <constraint firstItem="acp-bf-0WA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="IUX-GP-j6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aXv-xp-XbT" secondAttribute="bottom" constant="413" id="Q1l-Zx-HBF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TWJ-DC-Zef" secondAttribute="trailing" constant="39" id="Rcp-7y-Yn4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CAq-uk-zdz" secondAttribute="bottom" constant="300" id="S5u-P6-iS3"/>
+                            <constraint firstItem="cv5-Da-xpL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="288" id="Va3-V2-BO5"/>
+                            <constraint firstItem="dQM-29-L0d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="163" id="WrE-Kz-Ock"/>
+                            <constraint firstItem="TWJ-DC-Zef" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="XzD-3S-e1u"/>
+                            <constraint firstItem="cv5-Da-xpL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="164" id="YKq-MZ-lvk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="acp-bf-0WA" secondAttribute="bottom" constant="575" id="aNh-hG-vPs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="acp-bf-0WA" secondAttribute="trailing" constant="164" id="cLA-gA-26n"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CAq-uk-zdz" secondAttribute="trailing" constant="95" id="fjd-9N-9Ez"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dQM-29-L0d" secondAttribute="bottom" constant="575" id="iHM-4f-fq0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cv5-Da-xpL" secondAttribute="trailing" constant="39" id="qhL-Q8-iG2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aXv-xp-XbT" secondAttribute="trailing" constant="39" id="teu-lb-BSF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="changesTextView" destination="TWJ-DC-Zef" id="kJw-Qz-k4y"/>
+                        <outlet property="counterLabel" destination="aXv-xp-XbT" id="t8H-uw-HuY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.093023255813954" y="-27.682403433476395"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.circlepath" catalog="system" width="128" height="112"/>
+        <image name="minus.square" catalog="system" width="128" height="114"/>
+        <image name="plus.square" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
